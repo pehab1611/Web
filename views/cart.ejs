@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="/scripts/function.js"> </script>
+    </head>
+    <body onload="openCart()">
+        <div class="logo"> <img src="images/logo.jpg" alt="Čupavi prijatelji logotip"/> </div>
+        <div id="zaglavlje"> <h1> Košarica </h1> </div>
+        <div class="kosarica_logo"> 
+            <div id="kos" onclick="openCartPage()"> <div id="kolicina"> </div> </div>
+            <div id ="pov"> </div>
+        </div>
+        <div class="kategorije"> 
+            <a onclick="navigateCategory(0)"> Psi </a>
+            <a onclick="navigateCategory(1)"> Mačke </a>
+            <a onclick="navigateCategory(2)"> Ribice </a>
+            <a onclick="navigateCategory(3)"> Hrčci </a>
+            <a onclick="navigateCategory(4)"> Zečevi </a>
+            <a onclick="navigateCategory(5)"> Zamorci </a>
+            <a onclick="navigateCategory(6)"> Pauci </a>
+            <a onclick="navigateCategory(7)"> Reptili </a>
+            <a onclick="navigateCategory(8)"> Kornjače </a>
+            <a onclick="navigateCategory(9)"> Pribor </a>
+        </div>
+        <div id="main">
+            <div id="pozdrav"></div>
+        </div>
+        <div class="kontakt_etc"> 
+            <div> Kontakt </div>
+            <div> Newsletter </div>
+            <div> Pretplati se </div>
+        </div>
+        <div id="kosarica"> </div>
+    </body>
+</html>

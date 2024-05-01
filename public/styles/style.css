@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 130px 500px 15% 20% auto;
+}
+
+body div {
+    border-radius: 5px;
+}
+
+.logo {
+    display: flex;
+    align-content: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#zaglavlje {
+    font-size: 25px;
+    text-align: center;
+    background: pink;
+    grid-column: 2;
+}
+
+.kosarica_logo {
+    background-color: #e3787d;
+    grid-row: 1;
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: auto/2;
+    grid-template-rows: 1;
+    justify-items: center;
+    align-items: center;
+}
+
+#kos {
+    grid-row: 1;
+    grid-column: 1;
+    background-image: url('../images/kosarica.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 40%;
+    max-height: auto;
+    padding: 30px;
+
+    position: relative;
+}
+
+#kolicina {
+    background-image: url('../images/splotch1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#pov {
+    grid-row: 1;
+    grid-column: 2;
+    background-image: url('../images/povecalo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 50%;
+    max-height: auto;
+    padding: 30px;
+}
+
+.kategorije {
+    background-color: pink;
+    grid-column: 1;
+    grid-row: 2 / 4;
+
+    display: grid;
+    grid-template-rows: auto/10;
+    gap: 10px;
+    padding: 10px;
+}
+
+.kategorije a {
+    background-color: #e3787d;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.kategorije a:hover {
+    opacity: 0.5;
+}
+
+#main {
+    grid-column: 2 / 4;
+    background-image: url('../images/psi/australski_ovcar.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 50% auto 10%;
+    grid-template-areas:
+    "gore-lijevo gore-desno"
+    "pozdrav sredina-desno"
+    "dolje-lijevo dolje-desno";
+}
+
+#pozdrav {
+    background-image: url('../images/Untitled_Artwork-1.png');
+    grid-area: pozdrav;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.kontakt_etc {
+    background-color: pink;
+    grid-column: 1;
+    grid-row: 4 / 5;
+
+    display: grid;
+    grid-template-rows: auto/3;
+    gap: 10px;
+    padding: 15px;
+}
+
+.kontakt_etc div {
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kontakt_etc div:hover {
+    opacity: 0.5;
+}
+
+#proizvodi {
+    grid-column: 2 / 4;
+    background-color: pink;
+    grid-row: 3 / last-line;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+    resize: horizontal;
+}
+
+.proizvod {
+    border: 1px solid white;
+    background-color: #e3787d;
+    min-width: 220px;
+    width: calc((100% - 30px) / 3);
+    height: 300px;
+
+    display: grid;
+    grid-template-rows: auto 20%;
+    padding: 10px;
+    gap: 10px
+}
+
+.proizvod .slika {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.proizvod .tekst {
+    border: 1px solid white;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slika:hover > .kosarica {
+    opacity: 1;
+}
+
+.slika .kosarica {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../images/kosarica_border.png');
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slika .numOfItems {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../images/splotch1.png');
+}
+
+#kosarica {
+    grid-column: 2 / 4;
+    background-color: pink;
+    grid-row: 3 / last-line;
+    gap: 15px;
+    padding: 10px;
+    resize: horizontal;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.headerKosarica {
+    grid-row: 1;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1;
+    padding: 10px;
+    gap: 20px;
+}
+
+.headerKosarica div {
+    text-align: center;
+    background-color: #e3787d;
+    padding: 10px;
+}
+
+.item {
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 60% 8% 20% 8%;
+    grid-template-rows: 1;
+    padding: 10px;
+    gap: 20px;
+}
+
+.prodName {
+    text-align: center;
+    background-color: #e3787d;
+    padding: 10px;
+}
+
+.prodVal {
+    text-align: center;
+    background-color: #e3787d;
+    padding: 10px;
+}
+
+.pm {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo > img {
+    object-fit: scale-down;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.proizvod > h6 {
+    grid-row: 2;
+}
+
+@media screen and (max-width: 1024px) {
+    .proizvod {
+        border: 1px solid white;
+        background-color: #e3787d;
+        width: calc((100% - 15px) / 2);
+        height: 250px;
+        min-width: 0px;
+    }
+
+    #main {
+        grid-column: 1 / 4;
+    }
+
+    .kategorije {
+        grid-column: 1;
+        grid-row: 3 / 5;
+    }
+
+    .kontakt_etc {
+        grid-row: 5 / 6;
+    }
+}
